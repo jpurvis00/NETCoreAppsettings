@@ -9,7 +9,7 @@ There are 5 places that you can create/use settings for an application. These ar
 2. Environment variables - local system vars(user vars or system vars).  
 3. User Secrets - secrets.json - This is not picked up by version control and is a good place for things like connection strings, user id's and pw's in a developement environment.  This is not encrypted so things like prod pw's should be dealt with in a more secure fashion(ie. Azure Key Vault).  
 4. Environment specific json files  
-  - appsettings.Development.json
-  - appsettings.Staging.json
-  - appsettings.Production.json  
+    - appsettings.Development.json
+    - appsettings.Staging.json
+    - appsettings.Production.json  
 5. appsetting.json
