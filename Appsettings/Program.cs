@@ -1,6 +1,8 @@
 using Appsettings.Data;
+using Appsettings.Options;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.Configure<EmailSettingsOptions>(builder.Configuration.GetSection("EmailSettings"));
+builder.Configuration.AddJsonFile("custom.json", optional: true, reloadOnChange: true);
 
 var app = builder.Build();
 

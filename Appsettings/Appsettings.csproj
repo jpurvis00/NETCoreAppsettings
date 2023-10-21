@@ -7,4 +7,8 @@
     <UserSecretsId>74ae64dd-a910-4831-b44b-e62554591936</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
 </Project>
